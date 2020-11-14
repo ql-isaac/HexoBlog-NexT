@@ -124,9 +124,9 @@ douban:
     title: 书读百遍，其义自见
     quote: 非淡泊无以明志，非宁静无以致远
   movie:
-    title:
-    quote:
+    title: It's a beautiful day!
+    quote: It's a beautiful day!
   game:
-    title:
-    quote:
+    title: It's a beautiful day!
+    quote: It's a beautiful day!
   timeout: 10000 
