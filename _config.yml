@@ -99,7 +99,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@e.coding.net:ql-isaac/hexoblog/NexT.git
+  repo: 
+   coding: git@e.coding.net:ql-isaac/hexoblog/NexT.git
+   github: git@github.com:ql-isaac/ql-isaac.github.io.git
   branch: master
 
 hexo-tag-dplayer:
