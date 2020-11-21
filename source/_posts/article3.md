@@ -5,7 +5,7 @@ tags:
  - Hexo v4.2.1
  - Markdown
  - Windows 10
-categories: 个人静态博客搭建
+categories: 我的HexoBlog的诞生
 ---
 
 　　本文记录和讲解我的HexoBlog的使用，会持续更新。
