@@ -34,7 +34,7 @@ categories:
    git config --global user.email "<我的Github邮箱>"
    ```
 
-5. 接着在终端输入`ssh-keygen -t rsa`，按3个回车，此时打开[.ssh 文件夹](C:\\Users\\<我的Windows用户名>\\.ssh)，用文本编辑器打开id_rsa.pub，Ctrl+A复制里面全部的内容；
+5. 接着在终端输入`ssh-keygen -t rsa`，按3个回车，此时打开.ssh 文件夹，其位于你的Windows用户文件夹下，用文本编辑器打开id_rsa.pub，Ctrl+A复制里面全部的内容；
 
 6. 进入浏览器，进入Github，点击右上角的头像，点击Setting，点击左侧的SSH and GPG keys，点击右侧的New SSH key，填写Tile，也可以不填，填写Key，右键粘贴，粘贴刚复制的内容，最后点击Add SSH key。
 
