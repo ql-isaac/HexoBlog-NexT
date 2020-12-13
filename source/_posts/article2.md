@@ -11,13 +11,13 @@ categories:
 
 　　本文记录和讲解一下我的HexoBlog是如何个性化设置和配置的，可供大家参考，会持续更新。关于NexT这一主题的具体使用，大家还需参考[NexT官方博客](https://theme-next.org/)、[NexT官方文档](http://theme-next.iissnan.com/getting-started.html)和搜索引擎。
 
-　　小技巧：个性化设置和配置了一处我的HexoBlog，可以通过本地部署我的HexoBlog的方式（即在<存储HexoBlog的文件夹>下进入终端，输入`hexo s`）观察相应效果，修改一处，刷新一下，这样比较方便，等都设置和配置完毕了再部署。
+　　小技巧：个性化设置和配置了一处我的HexoBlog，可以通过本地部署我的HexoBlog的方式（即在<存储HexoBlog的文件夹>下进入终端，输入`hexo s`）观察相应效果，甚至可以修改一处，刷新一下查看效果，等都设置和配置完毕了再部署。
 
 <!--more-->
 
 ## Hexo的个性化设置和配置
 
-### NexT的下载和配置
+### NexT的下载和设置
 
 　　在<存储HexoBlog的文件夹>下进入终端，输入如下命令，等待NexT下载到当前文件夹下themes下next下。
 
@@ -37,36 +37,7 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next
 
 ![个性化配置效果图](https://image.ql-isaac.cn/个性化配置效果图.png)
 
-### 开启每篇文章的资源文件夹
-
-　　打开Hexo的配置文件，关键字post_asset_folder查找，将post_asset_folder的值改为true。每次新生成layout（layout默认有 post、page 和 draft三种 ）时都会在对应生成的Markdown文件同级目录下生成一个对应的资源文件夹，可将图片、音乐或视频存入该文件夹，这样，想插入图片、音乐或视频时直接填写图片、音乐或视频的完整文件名即可。
-
-### 在文章内插入视频
-
-　　在[存储HexoBlog的文件夹]下进入终端，输入如下命令安装 hexo-tag-dplayer。
-
-```bash
-cnpm install --save hexo-tag-dplayer
-```
-
-　　打开Hexo的配置文件，在最下面接着增加以下内容：
-
-```
-hexo-tag-dplayer:
-  cdn:
-    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
-  default:
-    api: https://api.prprpr.me/dplayer/
-    loop: yes
-    screenshot: yes
-```
-
-　　使用hexo-tag-dplayer在博客文章中插入视频非常简单，先将要插入的视频文件放入每篇文章的资源文件夹中，再将以下标记插入在对应的Markdown文件合适位置即可。
-
-```markdown
-{% dplayer "url=<要插入的视频文件的完整文件名>" %}
-```
+## NexT的个性化设置与配置
 
 ### 增加本地搜索功能
 
@@ -76,21 +47,25 @@ hexo-tag-dplayer:
 cnpm install --save hexo-generator-searchdb
 ```
 
-　　打开Hexo的配置文件，在最下面接着增加以下内容：
+　　编辑Hexo的配置文件，如下：
 
-```
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
+```diff
+# 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
+deploy:  
+  type: git  
+  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
+  branch: master
++
++search:
++  path: search.xml
++  field: post
++  format: html
++  limit: 10000
 ```
 
 　　开启本地搜索功能：打开NexT的配置文件，关键字local_search查找，设置enable为true即可。具体操作如下视频：
 
 {% dplayer "url=https://image.ql-isaac.cn/%E5%A2%9E%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.mp4" %}
-
-## NexT的个性化设置与配置
 
 ### 添加菜单项并创建相应页面
 
@@ -98,19 +73,17 @@ search:
 
 ![选择菜单项](https://image.ql-isaac.cn/选择菜单项.png)
 
-　　在<存储HexoBlog的文件夹>下进入终端，输入如下命令分别创建上述两菜单项页面，分别执行完毕后，会分别显示出在某一路径下生成了一个index.md，分别编辑生成的index.md，将title的值分别改为标签和分类，再在下一行分别添加type: tags和type: categories。
+　　在<存储HexoBlog的文件夹>下进入终端，输入如下命令分别创建上述两菜单项的页面，分别执行完毕后，会分别显示出在哪一路径下生成了一个index.md，分别编辑生成的index.md，将title的值分别改为标签和分类，再在下一行分别添加type: tags和type: categories。
 
 ```bash
-#创建标签页面
-hexo new page tags
+hexo new page tags #创建标签页面
 ```
 
 ```bash
-#创建分类页面
-hexo new page categories
+hexo new page categories #创建分类页面
 ```
 
-　　编辑<存储HexoBlog的文件夹>下scaffold下的post.md，在下一行增加tags:，再在下一行增加categories:，该文件 为模板文件，它定义了每新生成的一篇文章的Markdown文件（输入`hexo new post[自定义md文件名]`可创建一篇文章）的初始样子，我们在编辑新生成的Markdown文件时，只需自定义tags和categories的值，该文章就会在标签页面和分类页面被标记和分类起来。
+　　编辑<存储HexoBlog的文件夹>下scaffold下的post.md，在下一行增加tags:，再在下一行增加categories:，该文件为模板文件，它定义了每新生成的一篇文章（输入`hexo new post <自定义md文件名>`可创建一篇文章）的初始样子，我们在编辑新文章的Markdown文件时，只需自定义tags和categories的值，该文章就会在标签页面和分类页面被标记和分类起来。
 
 ### 选择主题风格
 
@@ -120,7 +93,7 @@ hexo new page categories
 
 ### 头像
 
-　　选择一张图片，放在[存储HexoBlog的文件夹]下themes下next下source下images下，打开NexT的配置文件，关键字avatar查找，按下图配置，效果图如下。
+　　选择一张图片，放在<存储HexoBlog的文件夹>下themes下next下source下images下，打开NexT的配置文件，关键字avatar查找，按下图配置，效果图如下。
 
 
 
@@ -180,29 +153,40 @@ https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js
 cnpm install --save hexo-douban
 ```
 
-　　打开Hexo的配置文件，在最下面接着增加以下内容：
-
-```
-douban:
-  user: <豆瓣ID>
-  builtin: true
-  book:
-    title: <书籍页面的标题>
-    quote: <开头的引言>
-  movie:
-    title: <电影页面的标题>
-    quote: <开头的引言>
-  game:
-    title: <游戏页面的标题>
-    quote: <开头的引言>
-  timeout: 10000
-```
-
-　　可以测试一下，`hexo s`，[本地访问](http://localhost:4000/books) ，确认是否访问正常。
-
-　　添加图书、电影和游戏的菜单项，打开NexT的配置文件，关键字menu查找，添加books项、movies项和games项，如下。
+　　编辑Hexo的配置文件，如下：
 
 ```diff
+# 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
+deploy:  
+  type: git  
+  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
+  branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
++douban:
++  user: <豆瓣ID>
++  builtin: true
++  book:
++    title: <书籍页面的标题>
++    quote: <开头的引言>
++  movie:
++    title: <电影页面的标题>
++    quote: <开头的引言>
++  game:
++    title: <游戏页面的标题>
++    quote: <开头的引言>
++  timeout: 10000
+```
+
+　　添加图书、电影和游戏的菜单项。打开NexT的配置文件，关键字menu查找，添加books项、movies项和games项，如下。
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的121行
  menu:
    home: / || home
    #about: /about/ || user

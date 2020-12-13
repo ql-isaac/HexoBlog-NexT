@@ -104,15 +104,6 @@ deploy:
    github: git@github.com:ql-isaac/ql-isaac.github.io.git
   branch: master
 
-hexo-tag-dplayer:
-  cdn:
-    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
-  default: 
-    api: https://api.prprpr.me/dplayer/
-    loop: yes
-    screenshot: yes
-
 search:
   path: search.xml
   field: post
@@ -131,4 +122,13 @@ douban:
   game:
     title: It's a beautiful day!
     quote: It's a beautiful day!
-  timeout: 10000 
+  timeout: 10000
+
+hexo-tag-dplayer:
+  cdn:
+    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
+    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
+  default: 
+    api: https://api.prprpr.me/dplayer/
+    loop: yes
+    screenshot: yes

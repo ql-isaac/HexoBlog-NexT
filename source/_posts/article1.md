@@ -48,15 +48,15 @@ categories:
 
 10. 安装cnpm提高下载速度，以后下载插件都可用cnpm（即将下载某一个插件的命令中的npm改为cnpm）。在终端输入如下命令，回车，等待cnpm下载完成；
 
-   ```bash
-   npm install -g cnpm --registry=http://registry.npm.taobao.org
-   ```
+    ```bash
+    npm install -g cnpm --registry=http://registry.npm.taobao.org
+    ```
 
 11. 在终端输入如下命令，回车，等待hexo-cli下载完成，可输入`hexo -v`查看相关信息；
 
-   ```bash
-   cnpm install -g hexo-cli
-   ```
+    ```bash
+    cnpm install -g hexo-cli
+    ```
 
 12. 在终端输入`hexo init`，等待，可在<存储HexoBlog的文件夹>中看到生成了如下图所示的文件。
 
@@ -64,7 +64,7 @@ categories:
 
 ### 本地部署我的HexoBlog
 
-13. 在终端输入`hexo s`，打开浏览器，输入localhost:4000，可看到本地部署的我的HexoBlog，如下图所示，Ctrl+C停止运行；
+13. 在终端输入`hexo s`，打开浏览器，输入localhost:4000，可看到本地部署的我的HexoBlog，如下图所示；
 
     ![本地部署的我的HexoBlog](https://image.ql-isaac.cn/本地部署的我的HexoBlog.png)
 
@@ -72,18 +72,19 @@ categories:
 
 14. 安装Hexo的Git插件。终端输入如下命令，回车，等待下载完成。
 
-   ```bash
-   cnpm install --save hexo-deployer-git
-   ```
+    ```bash
+    cnpm install --save hexo-deployer-git
+    ```
 
-15. 进入<存储HexoBlog的文件夹>，用文本编辑器打开_config.yml，在最下面找到“deploy:"，补充成如下内容，保存关闭：
+15. 进入<存储HexoBlog的文件夹>，用文本编辑器编辑_config.yml，如下所示，保存关闭：
 
-   ```
-   deploy:  
-     type: git  
-     repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
-     branch: master
-   ```
+    ```diff
+    # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
+    +deploy:  
+    +  type: git  
+    +  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
+    +  branch: master
+    ```
 
 16. 在终端输入`hexo g -d`，回车，进行博客的最终操作——生成静态文件后立即部署到Github Pages上（建议每次想把本地博客上传到Gihub Pages时，都使用该命令）。
 
