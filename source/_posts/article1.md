@@ -80,7 +80,13 @@ categories:
 
     ```diff
     # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
-    +deploy:  
+    deploy:  
+    -  type: ''
+    ```
+
+    ```diff
+    # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
+    deploy:  
     +  type: git  
     +  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
     +  branch: master
