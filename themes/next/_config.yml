@@ -626,8 +626,8 @@ valine:
   enable: true
   appid: dBCVczg7JFbkiJpRUXwpUBBC-gzGzoHsz
   appkey: PMRo3y14A7DDJjiVNLSwn02q
-  notify: false # Mail notifier
-  verify: false # Verification code
+  notify: true # Mail notifier
+  verify: true # Verification code
   placeholder: Just go go # Comment box placeholder
   avatar: mm # Gravatar style
   guest_info: nick,mail,link # Custom comment header
@@ -635,8 +635,8 @@ valine:
   language: zh-cn
   visitor: false # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
-  recordIP: false # Whether to record the commenter IP
-  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  recordIP: true # Whether to record the commenter IP
+  serverURLs: https://valine.ql-isaac.cn/ # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
   #post_meta_order: 0
 
 # LiveRe comments system
