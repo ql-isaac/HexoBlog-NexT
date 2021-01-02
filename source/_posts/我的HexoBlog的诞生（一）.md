@@ -2,11 +2,11 @@
 title: 我的HexoBlog的诞生（一）
 date: 2020-01-24 22:53:24
 tags:
+ - Windows 10 企业版 LTSC
+ - Node.js v12.14.0
  - Hexo v4.2.1
  - Git v2.25.0.windows.1
  - GitHub
- - Node.js v12.14.0
- - Windows 10
 categories: 
  - 我的HexoBlog的诞生
 ---

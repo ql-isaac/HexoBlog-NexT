@@ -1,10 +1,12 @@
 ---
 title: 	C从入门到精通（一）
-date: 2020-11-14 23:24:32
+date: 2020-11-14 23:24:24
 tags:
+ - Windows 10 企业版 LTSC
  - Ubuntu 18.04 LTS
- - VMware pro 15
-categories: C从入门到精通
+ - VMware® Workstation 15 Pro(15.5.0 build-14665864)
+categories: 
+ - C 从入门到精通
 ---
 
 　　任何比C语言更低级的语言，都不足以完整地抽象一个计算机系统，任何比C语言高级的语言，都可以用C语言实现。C语言不像是被发明的，它更像是被发现的，它无可替代、精妙绝伦。

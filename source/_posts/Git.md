@@ -1,12 +1,13 @@
 ---
 title: Git
-date: 2020-11-14 23:24:24
+date: 2020-11-14 23:24:32
 tags:
+ - Windows 10 企业版 LTSC
+ - Ubuntu 18.04 LTS
  - Git v2.25.0.windows.1
  - Git v2.17.1
- - Windows 10
- - Ubuntu 18.04 LTS
-categories: Git和GitHub从入门到实践
+categories: 
+ - Git和GitHub从入门到实践
 ---
 
 　　[林纳斯·托瓦兹](https://www.baidu.com/s?wd=林纳斯·托瓦兹&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao)在1991年10月5日发布了开源的Linux，从此，Linux操作系统不断发展壮大，其实Linux的壮大离不开全世界热心的志愿者，他们在世界各地为Linux编写代码，那么，Linux的代码是如何管理的呢？
@@ -85,7 +86,7 @@ categories: Git和GitHub从入门到实践
 
 15. 在桌面右键，点击Git Bash Here；
 
-   ![桌面右键](https://image.ql-isaac.cn/%E6%B3%A8%E5%86%8C.png)
+   ![桌面右键](https://image.ql-isaac.cn/%E6%A1%8C%E9%9D%A2%E5%8F%B3%E9%94%AE.png)
 
 16. 全局用户信息配置：分别输入以下两个命令回车执行，无提示表示命令执行成功，可以用`git config --list`来查看配置好的信息；
 
@@ -124,9 +125,7 @@ categories: Git和GitHub从入门到实践
    ```bash
    sudo apt-get update -y
    ```
-
-   ![SSH](https://image.ql-isaac.cn/%E6%9B%B4%E6%96%B0.png)
-
+![更新](https://image.ql-isaac.cn/%E6%9B%B4%E6%96%B0.png)
 2. 在终端输入以下命令回车执行，安装Git，可输入以下命令查看Git版本；
 
    ```bash
@@ -149,3 +148,16 @@ categories: Git和GitHub从入门到实践
    git config --global user.email "<自己的Github邮箱>"
    ```
 
+4. 生成SSH秘钥：输入以下命令回车执行，然后连敲三次回车键；
+
+   ```bash
+   ssh-keygen -t rsa
+   ```
+
+5. 再输入以下命令回车，输入用户密码安装Vim文本编辑器；
+
+   ```
+   
+   ```
+
+   
