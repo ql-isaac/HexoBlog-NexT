@@ -7,7 +7,7 @@ tags:
 categories: Java从入门到实践
 ---
 
-　　Java——面向对象编程语言的领军者！
+Java——面向对象编程语言的领军者！
 
 <!--more-->
 
