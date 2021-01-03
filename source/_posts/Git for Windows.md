@@ -44,7 +44,7 @@ categories:
 
 ![image-20210103174355777](https://image.ql-isaac.cn/Git-for-Windows/image-20210103174355777.png)
 
-　　credential helper，凭据帮助器？这是个什么玩意儿？start一下这个[new,cross-platform version of the Git Credential Manager]([microsoft/Git-Credential-Manager-Core: Secure, cross-platform Git credential storage with authentication to GitHub, Azure Repos, and other popular Git hosting services.](https://github.com/microsoft/Git-Credential-Manager-Core))先，有时间看看（虽然看不懂）。
+　　credential helper，凭据帮助器？这是个什么玩意儿？start一下这个[cross-platform version of the Git Credential Manager](https://github.com/microsoft/Git-Credential-Manager-Core)先，有时间看看（虽然看不懂）。
 
 ![image-20210103175247449](https://image.ql-isaac.cn/Git-for-Windows/image-20210103175247449.png)
 
