@@ -1,5 +1,5 @@
 ---
-title: Git
+title: 什么是Git？
 date: 2020-11-14 23:24:32
 tags:
  - Windows 10 企业版 LTSC
@@ -108,7 +108,7 @@ categories:
 
 18. Github的SSH公钥配置：登录自己的Github账号，点击右上角的头像，点击Setting，点击左侧的SSH and GPG keys，点击右侧的New SSH key，填写Tile，也可以不填，填写Key，右键粘贴，粘贴刚复制的内容，最后点击Add SSH key；
 
-19. 测试一下，输入以下命令回车执行，输入yes，再回车，有如下提示，至此，Windows上安装和配置Git完成。
+19. 测试一下，输入以下命令回车执行，输入yes，再回车，有如下提示，表示本机和自己的GitHub绑定成功。
 
    ```bash
    ssh -T git@github.com
@@ -154,10 +154,25 @@ categories:
    ssh-keygen -t rsa
    ```
 
-5. 再输入以下命令回车，输入用户密码安装Vim文本编辑器；
+5. 输入以下命令回车，输入用户密码安装Vim文本编辑器；
+
+   ```bash
+   sudo apt-get install vim
+   ```
+
+6. 执行以下命令，用Vim打开公钥文件，复制其中的内容（不要复制多了，也不要复制少了；
+
+   ```bash
+   vim /home/<自己的用户名>/.ssh/id_rsa.pub
+   ```
+
+7. 登录自己的Github账号，点击右上角的头像，点击Setting，点击左侧的SSH and GPG keys，点击右侧的New SSH key，填写Tile，也可以不填，填写Key，右键粘贴，粘贴刚复制的内容，最后点击Add SSH key；
+
+8. 测试一下，输入以下命令回车执行，有如下提示，表示本机和自己的GitHub绑定成功。
+   ```bash
+   ssh -T git@github.com
+   ```
 
    ```
-   
+   Hi <自己的GitHub用户名>! You've successfully authenticated, but GitHub does not provide shell access.
    ```
-
-   

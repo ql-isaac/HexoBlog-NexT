@@ -2,7 +2,7 @@
 title: Python从入门到实践（一）
 date: 2020-11-29 16:08:06
 tags:
- - Ubuntu 18.04 LTS
+ - Windows 10 企业版 LTSC
  - Python v3.8.1
  - Visual Studio Code
 categories: 
@@ -15,14 +15,14 @@ categories:
 
 ## Python特点
 
-1. 语法简单灵活
-2. 规范化代码
-3. Python是一个开源项目，有着广泛的开发支持
-4. Python是一门面向对象的编程语言
-5. Python具有强大的可移植性
-6. Python属于解释性的编程语言
-7. Python是一个“胶水语言”
-8. Python拥有良好的并发处理支持
+1. 语法简单灵活；
+2. 规范化代码；
+3. Python是一个开源项目，有着广泛的开发支持；
+4. Python是一门面向对象的编程语言；
+5. Python具有强大的可移植性；
+6. Python属于解释性的编程语言；
+7. Python是一个“胶水语言”；
+8. Python拥有良好的并发处理支持。
 
 ## 搭建Python学习环境
 
