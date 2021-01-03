@@ -10,7 +10,7 @@ categories:
  - Git和GitHub从入门到实践
 ---
 
-[林纳斯·托瓦兹](https://www.baidu.com/s?wd=林纳斯·托瓦兹&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao)在1991年10月5日发布了开源的Linux，从此，Linux操作系统不断发展壮大，其实Linux的壮大离不开全世界热心的志愿者，他们在世界各地为Linux编写代码，那么，Linux的代码是如何管理的呢？
+　　[林纳斯·托瓦兹](https://www.baidu.com/s?wd=林纳斯·托瓦兹&tn=SE_PcZhidaonwhc_ngpagmjz&rsv_dl=gh_pc_zhidao)在1991年10月5日发布了开源的Linux，从此，Linux操作系统不断发展壮大，其实Linux的壮大离不开全世界热心的志愿者，他们在世界各地为Linux编写代码，那么，Linux的代码是如何管理的呢？
 
 <!--more-->
 

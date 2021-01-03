@@ -10,7 +10,7 @@ categories:
  - 我的HexoBlog的诞生
 ---
 
-本文记录和讲解我的HexoBlog的使用，会持续更新。
+　　本文记录和讲解我的HexoBlog的使用，会持续更新。
 
 <!--more-->
 
