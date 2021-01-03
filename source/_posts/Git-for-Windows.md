@@ -22,7 +22,11 @@ categories:
 
 ![Git官网](https://image.ql-isaac.cn/Git-for-Windows/Git官网.png)
 
-{% note warning %}这里会跳转到IE浏览器，呵呵，赶紧在所有设置-应用-默认应用中把Web浏览器设置成Microsoft Edge再打开Git官网。{% endnote %}
+{% note warning %}
+
+这里会跳转到IE浏览器，呵呵，赶紧在所有设置-应用-默认应用中把Web浏览器设置成Microsoft Edge再打开Git官网。
+
+{% endnote %}
 
 ![Microsoft Edge](https://image.ql-isaac.cn/Git-for-Windows/Microsoft-Edge.png)
 
@@ -36,7 +40,11 @@ categories:
 
 　　勾选第二个，以后用`git init`初始化的默认分支名就为main了。
 
-{% note info %}由于某些原因，2020年10月1日，GitHub将启用main作为默认分支名，master将成为历史！{% endnote %}
+{% note info %}
+
+由于某些原因，2020年10月1日，GitHub将启用main作为默认分支名，master将成为历史！
+
+{% endnote %}
 
 ![main](https://image.ql-isaac.cn/Git-for-Windows/main.png)
 
