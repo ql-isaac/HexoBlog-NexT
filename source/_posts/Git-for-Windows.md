@@ -56,6 +56,10 @@ categories:
 
 ![credential helper](https://image.ql-isaac.cn/Git-for-Windows/credential-helper.png)
 
+　　实验性的选项：允许在Git Bash窗口中运行原生控制台程序，如Node或Python，而不使用winpty，但它仍然有已知的bug。不勾选。
+
+![实验性的选项](https://image.ql-isaac.cn/Git-for-Windows/实验性的选项.png)
+
 　　安装中。
 
 ![安装中](https://image.ql-isaac.cn/Git-for-Windows/安装中.png)
@@ -64,6 +68,6 @@ categories:
 
 ![完成](https://image.ql-isaac.cn/Git-for-Windows/完成.png)
 
-　　Release Notes；
+　　Release Notes。
 
 ![Release Notes](https://image.ql-isaac.cn/Git-for-Windows/Release-Notes.png)
