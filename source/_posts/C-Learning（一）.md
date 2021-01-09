@@ -1,6 +1,6 @@
 ---
 title: 	C从入门到精通（一）
-date: 2020-11-14 23:24:24
+date: 2020-02-13 19:56:24
 tags:
  - Windows 10 企业版 LTSC
  - Ubuntu 18.04 LTS
@@ -568,6 +568,3 @@ int main(){
 https://www.bilibili.com/video/av15267247
 
 https://www.bilibili.com/video/BV17s411N78s
-
-
-
