@@ -2,12 +2,13 @@
 title: Oracle数据库从入门到精通（一）
 date: 2020-02-29 18:22:37
 tags:
+ - Windows 10 专业版
  - Oracle Database 11g Release 2
- - Windows 10
-categories: Oracle数据库从入门到精通
+categories:
+ - Oracle数据库从入门到精通
 ---
 
-参考视频教程：https://www.bilibili.com/video/BV1NJ411M7fE?p=80
+　　参考视频教程：https://www.bilibili.com/video/BV1NJ411M7fE?p=80
 
 <!--more-->
 
@@ -19,7 +20,7 @@ categories: Oracle数据库从入门到精通
 
 1. 打开database文件夹，双击setup.exe安装，刚开始有一个如下图的错误，解决办法是编辑database下的stage下的cvu下的cvu_prereq.xml，在<CERTIFIED_SYSTEMS></CERTIFIED_SYSTEMS>间的最后位置添加以下代码，保存并关闭，重新安装即可。
 
-![错误](错误.png)
+![错误](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/错误.png)
 
 ```xml
 <OPERATING_SYSTEM RELEASE="6.2">
@@ -34,87 +35,87 @@ categories: Oracle数据库从入门到精通
 
 2. 不更新，下一步；
 
-![不更新](不更新.png)
+![不更新](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/不更新.png)
 
 3. 直接下一步；
 
-![创建](创建.png)
+![创建](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/创建.png)
 
 4. 选择服务器类，下一步；
 
-![服务器类](服务器类.png)
+![服务器类](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/服务器类.png)
 
 5. 直接下一步；
 
-![单实例](单实例.png)
+![单实例](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/单实例.png)
 
 6. 选择高级安装，下一步；
 
-![高级安装](高级安装.png)
+![高级安装](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/高级安装.png)
 
 7. 默认即可，下一步；
 
-![语言](语言.png)
+![语言](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/语言.png)
 
 8. 就选择企业版，下一步；
 
-![企业版](企业版.png)
+![企业版](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/企业版.png)
 
 9. 默认即可，下一步；
 
-![默认即可](默认即可.png)
+![默认即可](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/默认即可.png)
 
 10. 默认即可，下一步；
 
-![下一步](下一步.png)
+![下一步](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/下一步.png)
 
 11. 自定义SID的名称，不改，就默认也行；
 
-![自定义SID的名称](自定义SID的名称.png)
+![自定义SID的名称](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/自定义SID的名称.png)
 
 12. 使用Unicode字符集；
 
-![Unicode](Unicode.png)
+![Unicode](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/Unicode.png)
 
 13. 勾选创建具有示例方案的数据库，下一步；
 
-![创建具有示例方案的数据库](创建具有示例方案的数据库.png)
+![创建具有示例方案的数据库](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/创建具有示例方案的数据库.png)
 
 14. 默认即可，下一步；
 
-![过](过.png)
+![过](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/过.png)
 
 15. 默认即可，下一步；
 
-![再过](再过.png)
+![再过](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/再过.png)
 
 16. 不启动自动备份，下一步；
 
-![不自动备份](不自动备份.png)
+![不自动备份](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/不自动备份.png)
 
 17. 个人学习用，为了方便，设置为对所有账户使用相同的口令（口令必须以字母开头），下一步；
 
-![设置口令](设置口令.png)
+![设置口令](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/设置口令.png)
 
 18. 检查到错误，可以忽略，勾选全部忽略，下一步；
 
-![检查到错误](检查到错误.png)
+![检查到错误](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/检查到错误.png)
 
 19. 点击完成，等待；
 
-![等待](等待.png)
+![等待](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/等待.png)
 
 20. 点击口令管理；
 
-![口令管理](口令管理.png)
+![口令管理](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/口令管理.png)
 
 21. 设置sys用户密码为change_on_install，设置system用户为manager，解锁SCOTT用户并设置密码为tiger，解锁SH用户并设置密码为sh，确定，是，确定；
 
-![设置四个用户的密码](设置四个用户的密码.png)
+![设置四个用户的密码](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/设置四个用户的密码.png)
 
 22. 安装完成；
 
-![完成](完成.png)
+![完成](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/完成.png)
 
 ## SQL PLUS的使用
 
@@ -122,7 +123,7 @@ categories: Oracle数据库从入门到精通
 
 　　命令行CMD里输入sqlplus，输入scott，再输入密码tiger（不会回显），即可登录SCOTT用户。
 
-![登录scott用户](登录scott用户.gif)
+![登录scott用户](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/登录scott用户.gif)
 
 ### 第一次查询
 
@@ -132,7 +133,7 @@ categories: Oracle数据库从入门到精通
 SELECT * FROM TAB;
 ```
 
-![第一次查询](第一次查询.gif)
+![第一次查询](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/第一次查询.gif)
 
 　　呃，查询结果显示得比较乱，有一个命令可以解决这个问题，如下，设置每行显示的数据长度，执行完这个命令后再查询一下SCOTT用户有哪些表看看。
 
@@ -140,7 +141,7 @@ SELECT * FROM TAB;
 SET LINESIZE 100
 ```
 
-![显示问题](显示问题.gif)
+![显示问题](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/显示问题.gif)
 
 　　呃，如果觉得TNAME列的数据所占的长度太长了，有一个命令可以解决这个问题，如下，设置TNAME列的数据所占的长度，执行完这个命令后再查询一下SCOTT用户有哪些表看看。
 
@@ -148,7 +149,7 @@ SET LINESIZE 100
 COL TNAME FOR A20
 ```
 
-![太长了](太长了.gif)
+![太长了](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/太长了.gif)
 
 　　终于，能很舒服地查看到SCOTT用户下有四个表：BONUS、DEPT、EMP和SALGRADE。那么，再查询一下DEPT表吧。
 
@@ -156,7 +157,7 @@ COL TNAME FOR A20
 SELECT * FROM DEPT;
 ```
 
-![再查询一下DEPT表](再查询一下DEPT表.gif)
+![再查询一下DEPT表](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/再查询一下DEPT表.gif)
 
 ### 切换用户
 
@@ -172,7 +173,7 @@ CONN[ECT] 用户名/密码 [AS SYSDBA|SYSUSER]
 CONN SYS/change_on_install AS SYSDBA
 ```
 
-![切换到sys用户](切换到sys用户.png)
+![切换到sys用户](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/切换到sys用户.png)
 
 　　登录system用户看看，由于sys是普通管理员用户，命令如下：
 
@@ -180,7 +181,7 @@ CONN SYS/change_on_install AS SYSDBA
 CONN SYSTEM/manager
 ```
 
-![切换到system用户](切换到system用户.png)
+![切换到system用户](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/切换到system用户.png)
 
 　　system用户和sys用户都是管理员，应该是可以查询到SCOTT用户的DEPT表的，来试试。
 
@@ -188,7 +189,7 @@ CONN SYSTEM/manager
 SELECT * FROM DEPT;
 ```
 
-![表或视图不存在](表或视图不存在.png)
+![表或视图不存在](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/表或视图不存在.png)
 
 　　来确认一下当前用户是否是管理员用户。
 
@@ -196,7 +197,7 @@ SELECT * FROM DEPT;
 SHOW USER
 ```
 
-![SHOWUSER](SHOWUSER.png)
+![SHOWUSER](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/SHOWUSER.png)
 
 　　这就奇怪了，难道不能查询到？原来，是需要在表前指定用户。
 
@@ -204,7 +205,7 @@ SHOW USER
 SELECT * FROM SCOTT.DEPT;
 ```
 
-![加用户名](加用户名.png)
+![加用户名](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/加用户名.png)
 
 ## SQL
 
@@ -250,7 +251,7 @@ DESC 数据表;
 DESC DEPT;
 ```
 
-![DEPT的结构](DEPT的结构.png)
+![DEPT的结构](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/DEPT的结构.png)
 
 　　DEPT的结构解释：
 
@@ -276,7 +277,7 @@ SET LINESIZE 150
 
 　　再查询EMP：
 
-![EMP](EMP.png)
+![EMP](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/EMP.png)
 
 　　查看EMP的结构：
 
@@ -311,7 +312,7 @@ SELECT * FROM SALGRADE;
 DESC SALGRADE;
 ```
 
-![SALGRADE](SALGRADE.png)
+![SALGRADE](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/SALGRADE.png)
 
 　　SALGRADE的结构解释：
 
@@ -325,7 +326,7 @@ DESC SALGRADE;
 
 　　BONUS表没有数据，只有表结构。
 
-![BONUS](BONUS.png)
+![BONUS](https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/BONUS.png)
 
 　　BONUS的结构解释：
 

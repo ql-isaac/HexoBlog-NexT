@@ -2,9 +2,11 @@
 title: Python从入门到实践（二）
 date: 2020-02-10 15:01:37
 tags:
+ - Windows 10 企业版 LTSC
  - Python v3.8.1
  - Pycharm
-categories: Python从入门到实践
+categories:
+ - Python从入门到实践
 ---
 
 　　《Python从入门到实践（一）》是Python初级部分的学习笔记，主要是一些基础方面的内容，本篇就为Python高级部分的学习笔记，主要是一些面向对象方面的内容。
