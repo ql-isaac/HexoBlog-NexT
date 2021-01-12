@@ -1,16 +1,14 @@
 ---
 title: Java从入门到实践（一）
 date: 2020-02-06 16:03:27
+cover: https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Java-Learning（一）/Java.jpg
+description: Java——面向对象编程语言的领军者！
 tags:
  - Windows 10 专业版
  - JDK 9.0.4
 categories:
  - Java从入门到实践
 ---
-
-　　Java——面向对象编程语言的领军者！
-
-<!--more-->
 
 ## 参考视频教程
 

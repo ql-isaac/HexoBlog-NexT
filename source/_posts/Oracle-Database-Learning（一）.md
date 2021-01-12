@@ -1,16 +1,14 @@
 ---
 title: Oracle数据库从入门到精通（一）
 date: 2020-02-29 18:22:37
+cover: https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Oracle-Database-Learning（一）/Oracle.jpg
+description: 参考视频教程：https://www.bilibili.com/video/BV1NJ411M7fE?p=80
 tags:
  - Windows 10 专业版
  - Oracle Database 11g Release 2
 categories:
  - Oracle数据库从入门到精通
 ---
-
-　　参考视频教程：https://www.bilibili.com/video/BV1NJ411M7fE?p=80
-
-<!--more-->
 
 ## 下载Oracle Database 11g Release 2
 

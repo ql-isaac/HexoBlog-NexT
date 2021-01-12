@@ -1,6 +1,8 @@
 ---
 title: 我的HexoBlog的诞生（三）
 date: 2020-01-24 22:53:39
+cover: https://image.ql-isaac.cn/Blogging-bro.png
+description: 本文记录和讲解我的HexoBlog的使用，会持续更新。
 tags:
  - Windows 10 企业版 LTSC
  - Hexo v4.2.1
@@ -9,10 +11,6 @@ tags:
 categories:
  - 我的HexoBlog的诞生
 ---
-
-　　本文记录和讲解我的HexoBlog的使用，会持续更新。
-
-<!--more-->
 
 ## 使用Typora编辑Markdown文件，书写博客文章
 
