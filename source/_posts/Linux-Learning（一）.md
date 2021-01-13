@@ -2,13 +2,16 @@
 title: Linux从入门到实践（一）
 date: 2020-02-03 16:36:28
 cover: https://cdn.jsdelivr.net/gh/ql-isaac/CDN1/Linux-Learning（一）/Linux.jpg
-description: 操作系统作为软件的软件，实在是重中之重。
 tags:
  - CentOS 7.7(1908)
  - VMware® Workstation 15 Pro(15.5.0 build-14665864)
 categories:
  - Linux从入门到实践
 ---
+
+　　操作系统作为软件的软件，实在是重中之重。
+
+<!-- more -->
 
 ## 搭建Linux学习环境
 

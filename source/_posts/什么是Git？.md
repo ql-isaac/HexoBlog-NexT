@@ -2,7 +2,6 @@
 title: 什么是Git？
 date: 2020-01-24 22:53:47
 cover: https://image.ql-isaac.cn/Git.gif
-description: 林纳斯·托瓦兹在1991年10月5日发布了开源的Linux，从此，Linux操作系统不断发展壮大，其实Linux的壮大离不开全世界热心的志愿者，他们在世界各地为Linux编写代码，那么，Linux的代码是如何管理的呢？
 tags:
  - Windows 10 企业版 LTSC
  - Ubuntu 18.04 LTS
@@ -11,6 +10,10 @@ tags:
 categories: 
  - Git和GitHub从入门到实践
 ---
+
+　　林纳斯·托瓦兹在1991年10月5日发布了开源的Linux，从此，Linux操作系统不断发展壮大，其实Linux的壮大离不开全世界热心的志愿者，他们在世界各地为Linux编写代码，那么，Linux的代码是如何管理的呢？
+
+<!-- more -->、
 
 ## Git的诞生
 
