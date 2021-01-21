@@ -23,79 +23,65 @@ categories:
 
 ### 安装Node.js，安装Git和Git的配置
 
-3. 进入[Node.js官方网站](https://nodejs.org/)，点击下载LTX（Long Term Support）版，我下载的是v12.14.0版本的，安装步骤非常简单，一直next；
+3. 进入[Node.js官方网站](https://nodejs.org/zh-cn/)，点击下载LTX（Long Term Support）版，我下载的是[v12.14.0版本的msi安装程序](https://nodejs.org/download/release/v12.14.0/)，安装步骤非常简单，一直next；
 
-4. 进入[Git官方网站下载页面](https://git-scm.com/downloads)，选择64位Windows版本的Git下载，安装步骤也是一直next，安装好后需要进行全局用户信息的配置，在桌面右键，选择Git Bash Here进入终端，配置命令如下，分别执行即可，执行后没任何提示就说明执行成功；
-
-   ```bash
-   git config --global user.name "<我的Github用户名>"
-   ```
-
-   ```bash
-   git config --global user.email "<我的Github邮箱>"
-   ```
-
-5. 接着在终端输入`ssh-keygen -t rsa`，按3个回车，此时打开.ssh 文件夹，其位于你的Windows用户文件夹下，用文本编辑器打开id_rsa.pub，Ctrl+A复制里面全部的内容；
-
-6. 进入浏览器，进入Github，点击右上角的头像，点击Setting，点击左侧的SSH and GPG keys，点击右侧的New SSH key，填写Tile，也可以不填，填写Key，右键粘贴，粘贴刚复制的内容，最后点击Add SSH key。
-
-7. 测试本地和Github的SSH配置是否正确，打开终端输入`ssh -T git@github.com`回车，输入yes，回车，看到一句提示信息：Hi <我的Github用户名>! You've successfully authenticated, but GitHub does not provide shell access，配置成功。
+4. 进入[Git官方网站下载页面](https://git-scm.com/downloads)，选择Windows版本的Git下载，我下载的是[v2.25.0版本的exe安装程序(提取码：u7fp)](https://pan.baidu.com/s/1YJxkbnkwx-9x4Hr5Sz4jMQ)，[安装和配置步骤](https://blog.ql-isaac.cn/2020/01/24/%E4%BB%80%E4%B9%88%E6%98%AFGit%EF%BC%9F/#Windows-10%E4%B8%8A%E5%AE%89%E8%A3%85%E5%92%8C%E9%85%8D%E7%BD%AEGit)记录在另一篇文章中；
 
 ### 安装Hexo
 
-8. 在合适的路径下新建一个文件夹，文件夹名自定义，例如HexoBlog，作为<存储HexoBlog的文件夹>；
+5. 在合适的路径下新建一个文件夹，文件夹名自定义，例如HexoBlog，作为<存储HexoBlog的文件夹>；
 
-9. 打开<存储HexoBlog的文件夹>，在空白处点鼠标的右键，选择Git Bash Here进入终端；
+6. 打开<存储HexoBlog的文件夹>，在空白处点鼠标的右键，选择Git Bash Here进入终端；
 
-10. 安装cnpm提高下载速度，以后下载插件都可用cnpm（即将下载某一个插件的命令中的npm改为cnpm）。在终端输入如下命令，回车，等待cnpm下载完成；
+7. 安装cnpm提高下载速度，以后下载插件都可用cnpm（即将下载某一个插件的命令中的npm改为cnpm）。在终端输入如下命令，回车，等待cnpm下载完成；
 
     ```bash
     npm install -g cnpm --registry=http://registry.npm.taobao.org
     ```
 
-11. 在终端输入如下命令，回车，等待hexo-cli下载完成，可输入`hexo -v`查看相关信息；
+8. 在终端输入如下命令，回车，等待hexo-cli下载完成，可输入`hexo -v`查看相关信息；
 
     ```bash
     cnpm install -g hexo-cli
     ```
 
-12. 在终端输入`hexo init`，等待，可在<存储HexoBlog的文件夹>中看到生成了如下图所示的文件。
+9. 在终端输入`hexo init`，等待，可在<存储HexoBlog的文件夹>中看到生成了如下图所示的文件。
 
     ![初始文件](https://image.ql-isaac.cn/初始文件.png)
 
 ### 本地部署我的HexoBlog
 
-13. 在终端输入`hexo s`，打开浏览器，输入localhost:4000，可看到本地部署的我的HexoBlog，如下图所示；
+10. 在终端输入`hexo s`，打开浏览器，输入localhost:4000，可看到本地部署的我的HexoBlog，如下图所示；
 
     ![本地部署的我的HexoBlog](https://image.ql-isaac.cn/本地部署的我的HexoBlog.png)
 
 ### 部署至Github Pages
 
-14. 安装Hexo的Git插件。终端输入如下命令，回车，等待下载完成。
+11. 安装Hexo的Git插件。终端输入如下命令，回车，等待下载完成。
 
     ```bash
     cnpm install --save hexo-deployer-git
     ```
 
-15. 进入<存储HexoBlog的文件夹>，用文本编辑器编辑_config.yml，如下所示，保存关闭：
+12. 在<存储HexoBlog的文件夹>中找到_config.yml，用文本编辑器编辑，如下所示，保存关闭：
 
     ```diff
-    # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
+    # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行（随着Hexo的不断更新，本行对应在你的_config.yml中应该不是第99行，请以实际情况为准）
     deploy:  
     -  type: ''
     ```
 
     ```diff
-    # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
+    # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行（随着Hexo的不断更新，本行对应在你的_config.yml中应该不是第99行，请以实际情况为准）
     deploy:  
     +  type: git  
     +  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
     +  branch: master
     ```
 
-16. 在终端输入`hexo g -d`，回车，进行博客的最终操作——生成静态文件后立即部署到Github Pages上（建议每次想把本地博客上传到Gihub Pages时，都使用该命令）。
+13. 在终端输入`hexo g -d`，回车，进行博客的最终操作——生成静态文件后立即部署到Github Pages上（建议每次想把本地博客上传到Gihub Pages时，都使用该命令）。
 
-17. [大功告成](https://ql-isaac.github.io)（将ql-isaac替换成自己的Github用户名）。
+14. [大功告成](https://ql-isaac.github.io)（将ql-isaac替换成自己的Github用户名）。
 
 
 ### 参考资料

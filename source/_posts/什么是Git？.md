@@ -13,7 +13,7 @@ categories:
 
 　　林纳斯·托瓦兹在1991年10月5日发布了开源的Linux，从此，Linux操作系统不断发展壮大，其实Linux的壮大离不开全世界热心的志愿者，他们在世界各地为Linux编写代码，那么，Linux的代码是如何管理的呢？
 
-<!-- more -->、
+<!-- more -->
 
 ## Git的诞生
 
@@ -21,11 +21,11 @@ categories:
 
 ## Git真的很重要
 
-　　代码改变世界。每一门编程语言的第一个程序都是在屏幕上打印出”Hello,World!“，这就好像该门编程语言也是拥有生命力般，满怀自信地说着你好，世界！他相信自己能给世界带来更多的可能，而这一切的一切的幕后，是程序员和版本控制系统，Git就是最流行的版本控制系统，没有之一。
+　　代码改变世界。每一门编程语言的第一个程序都是在屏幕上打印出“Hello,World!”，这就好像该门编程语言也是拥有生命力般，满怀自信地说着你好，世界！他相信自己能给世界带来更多的可能，而这一切的一切的幕后，是程序员和版本控制系统，Git就是最流行的版本控制系统，没有之一。
 
 ## 安装和配置Git
 
-　　我在《我的HexoBlog的诞生（一）》中已经完成了Git的安装和配置，不过那是在Windows上，而且也没详细讲，这里就详细讲解一下如何在Windows和Linux上安装和配置Git吧。
+　　我在《我的HexoBlog的诞生（一）》中已经完成了Git的安装和配置，不过那只是在Windows上，而且也没详细讲，这里就详细讲解一下如何在Windows和Linux上安装和配置Git吧。
 
 ### Windows 10上安装和配置Git
 
@@ -99,7 +99,7 @@ categories:
    git config --global user.email "<自己的Github邮箱>"
    ```
 
-17. 生成SSH秘钥：输入以下命令回车执行，然后连敲三次回车键，在如下图所示路径下会生成以下两个文件，用文本编辑器打开id_rsa.pub，Ctrl+A复制里面全部的内容；
+17. 生成SSH秘钥：输入以下命令回车执行，然后连敲三次回车键，此时打开.ssh 文件夹，其位于你的Windows用户文件夹下，如下图，用文本编辑器打开id_rsa.pub，Ctrl+A复制里面全部的内容；
 
    ```bash
    ssh-keygen -t rsa
@@ -107,7 +107,7 @@ categories:
 
    ![SSH](https://image.ql-isaac.cn/SSH.png)
 
-18. Github的SSH公钥配置：登录自己的Github账号，点击右上角的头像，点击Setting，点击左侧的SSH and GPG keys，点击右侧的New SSH key，填写Tile，也可以不填，填写Key，右键粘贴，粘贴刚复制的内容，最后点击Add SSH key；
+18. Github的SSH公钥配置：登录自己的Github账号，点击右上角的头像，点击Setting，点击左侧的SSH and GPG keys，点击右侧的New SSH key，填写Tile，填写Key，右键粘贴，粘贴刚复制的内容，最后点击Add SSH key；
 
 19. 测试一下，输入以下命令回车执行，输入yes，再回车，有如下提示，表示本机和自己的GitHub绑定成功。
 
