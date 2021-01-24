@@ -4,7 +4,7 @@ date: 2020-01-24 22:53:39
 cover: https://image.ql-isaac.cn/Blogging-bro.png
 tags:
  - Windows 10 企业版 LTSC
- - Hexo v4.2.1
+ - Hexo v4.2.0
  - Markdown
  - Typora
 categories:

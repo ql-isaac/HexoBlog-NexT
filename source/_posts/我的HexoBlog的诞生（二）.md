@@ -4,7 +4,7 @@ date: 2020-01-24 22:53:32
 cover: https://image.ql-isaac.cn/Setup-bro.png
 tags:
  - Windows 10 企业版 LTSC
- - Hexo v4.2.1
+ - Hexo v4.2.0
  - NexT v7.7.0
 categories: 
  - 我的HexoBlog的诞生

@@ -5,7 +5,7 @@ cover: https://image.ql-isaac.cn/Working-rafiki.png
 tags:
  - Windows 10 企业版 LTSC
  - Node.js v12.14.0
- - Hexo v4.2.1
+ - Hexo v4.2.0
  - Git v2.25.0.windows.1
  - GitHub
 categories: 
