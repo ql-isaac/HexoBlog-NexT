@@ -45,7 +45,7 @@ jobs:
       
       - name: Deploy my HexoBlog
         run: |
-          hexo clean && hexo g
+          hexo -v && hexo clean && hexo g
           cd ./public
           git init
           git config user.name "${{secrets.GIT_NAME}}"
