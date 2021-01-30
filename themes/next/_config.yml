@@ -131,7 +131,7 @@ menu:
   books: /books || book
   movies: /movies || video-camera
   games: /games || gamepad
-  Butterfly版: https://ql-isaac.cn/ || fa fa-picture-o
+  Butterfly版: https://ql-isaac.cn/ || fa fa-tree
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
