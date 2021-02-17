@@ -145,7 +145,7 @@ $(function () {
     preload: "auto",
     volume: Number("0"),
     video: {
-      url: "https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/增加本地搜索功能/增加本地搜索功能.m3u8", //自己的m3u8地址
+      url: "https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/增加本地搜索功能/增加本地搜索功能.m3u8",
       type: "hls",
       defaultQuality: 0,
       thumbnails: "thumbnails.jpg",
