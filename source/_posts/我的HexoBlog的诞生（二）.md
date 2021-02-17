@@ -234,4 +234,65 @@ https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js
 
 ### 加入豆瓣页面
 
-　　在<存储HexoBlog�
+　　在<存储HexoBlog的文件夹>下进入终端，输入如下命令安装hexo-douban模块。
+
+```bash
+cnpm install --save hexo-douban
+```
+
+　　编辑Hexo的配置文件，如下：
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
+deploy:  
+  type: git  
+  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
+  branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
++douban:
++  user: <豆瓣ID>
++  builtin: true
++  book:
++    title: <书籍页面的标题>
++    quote: <开头的引言>
++  movie:
++    title: <电影页面的标题>
++    quote: <开头的引言>
++  game:
++    title: <游戏页面的标题>
++    quote: <开头的引言>
++  timeout: 10000
+```
+
+　　添加图书、电影和游戏的菜单项。打开NexT的配置文件，关键字menu查找，添加books项、movies项和games项，如下。
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的121行
+ menu:
+   home: / || home
+   #about: /about/ || user
+   tags: /tags/ || tags
+   categories: /categories/ || th
+   archives: /archives/ || archive
+   #schedule: /schedule/ || calendar
+   #sitemap: /sitemap.xml || sitemap
+   #commonweal: /404/ || heartbeat
++  books: /books || <Font Awesome图标>
++  movies: /movies || <Font Awesome图标>
++  games: /games || <Font Awesome图标>
+```
+
+![添加豆瓣页面菜单项](https://image.ql-isaac.cn/添加豆瓣页面菜单项.png)
+
+　　在<存储HexoBlog的文件夹>下themes下next下languages下找到zh-CN.yml，menu处，添加books项、movies项和games项对应的翻译，如下图。
+
+![添加豆瓣页面菜单项简体中文翻译](https://image.ql-isaac.cn/添加豆瓣页面菜单项简体中文翻译.png)
+
+## 结语
+
