@@ -133,7 +133,9 @@ local_search:
 ```
 
 <div id="dplayer" class="dplayer-video dplayer dplayer-no-danmaku dplayer-paused"></div>
-<script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/MoePlayer/DPlayer@master/dist/DPlayer.min.js"></script>
 <script>
 $(function () {
   const dp = new DPlayer({
