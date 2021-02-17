@@ -10,15 +10,18 @@ categories:
  - 我的HexoBlog的诞生
 ---
 
-　　本文记录和讲解一下我的HexoBlog是如何个性化设置和配置的，可供大家参考，会持续更新。关于NexT这一主题的具体使用，大家还需参考NexT官方博客、NexT官方文档和搜索引擎。
-
-　　小技巧：个性化设置和配置了一处我的HexoBlog，可以通过本地部署我的HexoBlog的方式（即在<存储HexoBlog的文件夹>下进入终端，输入`hexo s`）观察相应效果，甚至可以修改一处，刷新一下查看效果，等都设置和配置完毕了再部署。
+　　本文记录和讲解一下我的HexoBlog是如何个性化设置和配置的，可供大家参考，我会持续更新，保持和[我的HexoBlog](https://ql-isaac.github.io)的同步。
 
 <!-- more -->
 
+## 重要提示
+
+　　个性化设置和配置了一处自己的HexoBlog，可以通过本地部署的方式（即在<存储HexoBlog的文件夹>下进入终端，输入`hexo s`）查看相应效果，甚至可以直接修改一处，刷新一下查看效果，等都设置和配置完毕了再部署到Github Pages上，即在<存储HexoBlog的文件夹>下进入终端，执行`hexo clean && hexo g -d`。
+
 ## Hexo的个性化设置和配置
 
-### NexT的下载和设置
+### 下载和设置NexT主题
+　　原版的landscape主题并不好看，在网上搜索了一下，发现NexT主题是最受欢迎的。
 
 　　在<存储HexoBlog的文件夹>下进入终端，输入如下命令，等待NexT下载到当前文件夹下themes下next下。
 
@@ -26,17 +29,51 @@ categories:
 git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```
 
-　　下载完成后，在<存储HexoBlog的文件夹>下找到_config.yml，此为Hexo的配置文件，打开它，找到theme，设置其值为next，如下图所示（注意在项和值之间有一个空格）。
+　　下载完成后，编辑Hexo的配置文件：
 
-![theme项的设置](https://image.ql-isaac.cn/theme项的设置.png)
+```diff
+# 本行为<存储HexoBlog的文件夹>\_config.yml的第92行（随着Hexo的不断更新，本行对应在你的_config.yml中不一定是第92行，请以实际情况为准）
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+-theme: landscape
+```
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\_config.yml的第92行（随着Hexo的不断更新，本行对应在你的_config.yml中不一定是第92行，请以实际情况为准）
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
++theme: next
+```
 
 ### 配置站点信息
 
-　　打开Hexo的配置文件，在上方有几项，按照下图的对照关系，个性化配置。
+　　编辑Hexo的配置文件，个性化配置自己的站点信息即可：
 
-![个性化配置](https://image.ql-isaac.cn/个性化配置.png)
+```diff
+# 本行为<存储HexoBlog的文件夹>\_config.yml的第4行（随着Hexo的不断更新，本行对应在你的_config.yml中不一定是第4行，请以实际情况为准）
+# Site
+-title: Hexo
+-subtitle: ''
+-description: ''
+-keywords:
+-author: John Doe
+-language: en
+-timezone: ''
+```
 
-![个性化配置效果图](https://image.ql-isaac.cn/个性化配置效果图.png)
+```diff
+# 本行为<存储HexoBlog的文件夹>\_config.yml的第4行（随着Hexo的不断更新，本行对应在你的_config.yml中不一定是第4行，请以实际情况为准）
+# Site
++title: isaac's HexoBlog
++subtitle: It's a beautiful day!
++description: 学习与生活
++keywords: 学习与生活
++author: isaac
++language: zh-CN
++timezone: 
+```
 
 ## NexT的个性化设置与配置
 
@@ -48,15 +85,10 @@ git clone https://github.com/theme-next/hexo-theme-next themes/next
 cnpm install --save hexo-generator-searchdb
 ```
 
-　　编辑Hexo的配置文件，如下：
+　　编辑Hexo的配置文件：
 
 ```diff
-# 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
-deploy:  
-  type: git  
-  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
-  branch: master
-+
+# 本行为<存储HexoBlog的文件夹>\_config.yml的第105行（随着Hexo的不断更新，本行对应在你的_config.yml中不一定是第105行，请以实际情况为准
 +search:
 +  path: search.xml
 +  field: post
@@ -64,9 +96,63 @@ deploy:
 +  limit: 10000
 ```
 
-　　开启本地搜索功能：打开NexT的配置文件，关键字local_search查找，设置enable为true即可。具体操作如下视频：
+　　开启本地搜索功能。编辑NexT的配置文件：
 
-{% dplayer "url=https://image.ql-isaac.cn/%E5%A2%9E%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD.mp4" %}
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第750行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第750行，请以实际情况为准
+# Local Search
+# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
+local_search:
+-  enable: false
+  # If auto, trigger search by changing input.
+  # If manual, trigger search by pressing enter key or search button.
+  trigger: auto
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  # Preload the search data when the page loads.
+  preload: false
+```
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第750行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第750行，请以实际情况为准
+# Local Search
+# Dependencies: https://github.com/theme-next/hexo-generator-searchdb
+local_search:
++  enable: true
+  # If auto, trigger search by changing input.
+  # If manual, trigger search by pressing enter key or search button.
+  trigger: auto
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  # Preload the search data when the page loads.
+  preload: false
+```
+
+<div id="dplayer" class="dplayer-video dplayer dplayer-no-danmaku dplayer-paused"></div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+<script>
+$(function () {
+  const dp = new DPlayer({
+    container: document.getElementById("dplayer"),
+    autoplay: !0,
+    theme: "#42b983",
+    loop: true,
+    lang: "zh-cn",
+    preload: "auto",
+    volume: Number("0"),
+    video: {
+      url: "https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/增加本地搜索功能/增加本地搜索功能.m3u8", //自己的m3u8地址
+      type: "hls",
+      defaultQuality: 0,
+      thumbnails: "thumbnails.jpg",
+    },
+  });
+});
+</script>
 
 ### 添加菜单项并创建相应页面
 
@@ -148,62 +234,4 @@ https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js
 
 ### 加入豆瓣页面
 
-　　在<存储HexoBlog的文件夹>下进入终端，输入如下命令安装hexo-douban模块。
-
-```bash
-cnpm install --save hexo-douban
-```
-
-　　编辑Hexo的配置文件，如下：
-
-```diff
-# 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
-deploy:  
-  type: git  
-  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
-  branch: master
-
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
-
-+douban:
-+  user: <豆瓣ID>
-+  builtin: true
-+  book:
-+    title: <书籍页面的标题>
-+    quote: <开头的引言>
-+  movie:
-+    title: <电影页面的标题>
-+    quote: <开头的引言>
-+  game:
-+    title: <游戏页面的标题>
-+    quote: <开头的引言>
-+  timeout: 10000
-```
-
-　　添加图书、电影和游戏的菜单项。打开NexT的配置文件，关键字menu查找，添加books项、movies项和games项，如下。
-
-```diff
-# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的121行
- menu:
-   home: / || home
-   #about: /about/ || user
-   tags: /tags/ || tags
-   categories: /categories/ || th
-   archives: /archives/ || archive
-   #schedule: /schedule/ || calendar
-   #sitemap: /sitemap.xml || sitemap
-   #commonweal: /404/ || heartbeat
-+  books: /books || <Font Awesome图标>
-+  movies: /movies || <Font Awesome图标>
-+  games: /games || <Font Awesome图标>
-```
-
-![添加豆瓣页面菜单项](https://image.ql-isaac.cn/添加豆瓣页面菜单项.png)
-
-　　在<存储HexoBlog的文件夹>下themes下next下languages下找到zh-CN.yml，menu处，添加books项、movies项和games项对应的翻译，如下图。
-
-![添加豆瓣页面菜单项简体中文翻译](https://image.ql-isaac.cn/添加豆瓣页面菜单项简体中文翻译.png)
+　　在<存储HexoBlog�

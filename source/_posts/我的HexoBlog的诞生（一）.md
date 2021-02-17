@@ -19,7 +19,7 @@ categories:
 ### 注册我的Github账户，建立Github Pages
 
 1. 进入[Github首页](http://github.com/)，点击Sign up注册，填写Username等，验证邮箱，注册成功；
-2. 点击右上角的加号，点击New repository，填写Repository name，这里的仓库名必须要按照”<我的Github用户名>.github.io“的格式来填，填写Description，点击Creat repository，创建Github Pages成功。
+2. 点击右上角的加号，点击New repository，填写Repository name，这里的仓库名建议按照”<自己的Github用户名>.github.io“的格式来填，填写Description，点击Creat repository，创建Github Pages成功；
 
 ### 安装Node.js，安装Git和Git的配置
 
@@ -39,7 +39,7 @@ categories:
     npm install -g cnpm --registry=http://registry.npm.taobao.org
     ```
 
-8. 在终端输入如下命令，回车，等待hexo-cli下载完成，可输入`hexo -v`查看相关信息；
+8. 在终端输入如下命令，回车，等待hexo-cli下载完成，可输入`hexo -v`查看相关版本信息；
 
     ```bash
     cnpm install -g hexo-cli
@@ -47,13 +47,11 @@ categories:
 
 9. 在终端输入`hexo init`，等待，可在<存储HexoBlog的文件夹>中看到生成了如下图所示的文件。
 
-    ![初始文件](https://image.ql-isaac.cn/初始文件.png)
+![初始文件](https://image.ql-isaac.cn/初始文件.png)
 
 ### 本地部署我的HexoBlog
 
-10. 在终端输入`hexo s`，打开浏览器，输入localhost:4000，可看到本地部署的我的HexoBlog，如下图所示；
-
-    ![本地部署的我的HexoBlog](https://image.ql-isaac.cn/本地部署的我的HexoBlog.png)
+10. 在终端输入`hexo s`，之后打开浏览器，输入localhost:4000，可看到本地部署的我的HexoBlog，表明没什么问题；
 
 ### 部署至Github Pages
 
@@ -63,32 +61,34 @@ categories:
     cnpm install --save hexo-deployer-git
     ```
 
-12. 在<存储HexoBlog的文件夹>中找到_config.yml，用文本编辑器编辑，如下所示，保存关闭：
+12. 编辑Hexo的配置文件：
 
     ```diff
-    # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行（随着Hexo的不断更新，本行对应在你的_config.yml中应该不是第99行，请以实际情况为准）
+    # 本行为<存储HexoBlog的文件夹>\_config.yml的第97行（随着Hexo的不断更新，本行对应在你的_config.yml中不一定是第97行，请以实际情况为准）
+    # Deployment
+    ## Docs: https://hexo.io/docs/deployment.html
     deploy:  
     -  type: ''
     ```
-
     ```diff
-    # 本行为<存储HexoBlog的文件夹>\_config.yml的第99行（随着Hexo的不断更新，本行对应在你的_config.yml中应该不是第99行，请以实际情况为准）
+    # 本行为<存储HexoBlog的文件夹>\_config.yml的第97行（随着Hexo的不断更新，本行对应在你的_config.yml中不一定是第97行，请以实际情况为准）
+    # Deployment
+    ## Docs: https://hexo.io/docs/deployment.html
     deploy:  
     +  type: git  
-    +  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
-    +  branch: master
+    +  repo: 
+    +   github: git@github.com:<自己的Github用户名>/<自己的Github用户名>.github.io.git,master        
     ```
 
-13. 在终端输入`hexo g -d`，回车，进行博客的最终操作——生成静态文件后立即部署到Github Pages上（建议每次想把本地博客上传到Gihub Pages时，都使用该命令）。
+13. 在终端输入`hexo g -d`，回车，进行博客的最终操作——生成静态文件后立即部署到Github Pages上；
 
 14. [大功告成](https://ql-isaac.github.io)（将ql-isaac替换成自己的Github用户名）。
 
-
-### 参考资料
+### 参考
 
 https://blog.csdn.net/huangqqdy/article/details/83032408
 https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80
 https://caiyantao.gitee.io/2019/04/13/Hexo-一/
 https://caiyantao.gitee.io/2019/04/13/Hexo%EF%BC%88%E4%BA%8C%EF%BC%89/#more
 https://caiyantao.gitee.io/2019/04/13/Hexo（二）/#more
-https://www.bilibili.com/video/av44544186?from=search&seid=9508828059673681599
+https://www.bilibili.c
