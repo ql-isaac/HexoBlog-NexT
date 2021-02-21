@@ -45,6 +45,7 @@ jobs:
       
       - name: Deploy my HexoBlog
         run: |
+          git clone https://github.com/ql-isaac/_posts.git source/_posts
           hexo -v && hexo clean && hexo g
           cd ./public
           git init
