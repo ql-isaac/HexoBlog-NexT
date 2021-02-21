@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://next.ql-isaac.cn
+url: http://blog.ql-isaac.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -41,14 +41,14 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: 
+  tab_replace: ''
   wrap: true
   hljs: false
 
@@ -103,12 +103,6 @@ deploy:
    coding: git@e.coding.net:ql-isaac/hexoblog/NexT.git,master
    github: git@github.com:ql-isaac/ql-isaac.github.io.git,master
 
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
-
 douban:
   user: 214534818
   builtin: true
@@ -123,11 +117,8 @@ douban:
     quote: It's a beautiful day!
   timeout: 10000
 
-hexo-tag-dplayer:
-  cdn:
-    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
-  default: 
-    api: https://api.prprpr.me/dplayer/
-    loop: yes
-    screenshot: yes
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

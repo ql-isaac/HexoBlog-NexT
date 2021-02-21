@@ -86,7 +86,6 @@ categories:
 
 ### 参考
 
-https://blog.csdn.net/huangqqdy/article/details/83032408
 https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80
 https://caiyantao.gitee.io/2019/04/13/Hexo-一/
 https://caiyantao.gitee.io/2019/04/13/Hexo%EF%BC%88%E4%BA%8C%EF%BC%89/#more

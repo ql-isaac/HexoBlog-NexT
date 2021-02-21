@@ -68,51 +68,6 @@ categories:
 cnpm install --save hexo-tag-dplayer
 ```
 
-　　编辑Hexo的配置文件，如下：
-
-```diff
-# 本行为<存储HexoBlog的文件夹>\_config.yml的第99行
-deploy:  
-  type: git  
-  repo: git@github.com:<我的Github用户名>/<我的Github用户名>.github.io.git         
-  branch: master
-
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
-
-douban:
-  user: <豆瓣ID>
-  builtin: true
-  book:
-    title: <书籍页面的标题>
-    quote: <开头的引言>
-  movie:
-    title: <电影页面的标题>
-    quote: <开头的引言>
-  game:
-    title: <游戏页面的标题>
-    quote: <开头的引言>
-  timeout: 10000
-
-+hexo-tag-dplayer:
-+  cdn:
-+    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-+    - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
-+  default:
-+    api: https://api.prprpr.me/dplayer/
-+    loop: yes
-+    screenshot: yes
-```
-
-　　使用hexo-tag-dplayer在博客文章中插入视频非常简单，先将要插入的视频文件放入每篇文章的资源文件夹中，再将以下标记插入在对应的Markdown文件合适位置即可。
-
-```markdown
-{% dplayer "url=<要插入的视频文件的完整文件名>" %}
-```
-
 ## 部署在Github Pages上太慢了！
 
 
