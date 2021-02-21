@@ -1,6 +1,7 @@
 ---
 title: 我的HexoBlog的诞生（二）
 date: 2020-01-24 22:53:32
+updated: 2021-02-21 19:03:49
 cover: https://image.ql-isaac.cn/Setup-bro.png
 tags:
  - Windows 10 企业版 LTSC
@@ -500,6 +501,21 @@ links:
 +  <标题3>: <地址3>
 ```
 
+　　演示视频：
+
+<video id="video2" preload controls loop style="height: 100%;width: 100%;object-fit: cover;"></video>
+<script>
+  if (Hls.isSupported()) {
+    var video2 = document.getElementById('video2');
+    var hls = new Hls();
+    hls.loadSource('https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/添加友情链接/添加友情链接.m3u8');
+    hls.attachMedia(video2);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+  });
+  }
+</script>
+
 ### Use icon instead of the symbol # to indicate the tag at the bottom of the post
 
 　　编辑NexT的配置文件：
@@ -733,6 +749,188 @@ font:
     family:
 ```
 
+### 优雅地查看图片
+
+　　编辑NexT的配置文件：
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第529行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第529行，请以实际情况为准
+# FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
+# For more information: https://fancyapps.com/fancybox
+-fancybox: false
+```
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第529行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第529行，请以实际情况为准
+# FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
+# For more information: https://fancyapps.com/fancybox
++fancybox: true
+```
+
+### 开启图片懒加载
+
+　　编辑NexT的配置文件：
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第538行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第538行，请以实际情况为准
+# Vanilla JavaScript plugin for lazyloading images.
+# For more information: https://github.com/ApoorvSaxena/lozad.js
+-lazyload: false
+```
+
+```diff
+# Vanilla JavaScript plugin for lazyloading images.
+# For more information: https://github.com/ApoorvSaxena/lozad.js
++lazyload: true
+```
+
+### 自动加空格
+
+　　编辑NexT的配置文件：
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第542行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第542行，请以实际情况为准
+# Pangu Support
+# For more information: https://github.com/vinta/pangu.js
+-pangu: false
+```
+
+```diff
+# Pangu Support
+# For more information: https://github.com/vinta/pangu.js
++pangu: true
+```
+
+### 添加Valine评论系统
+
+　　Valine是基于LeanCloud的，首先需要[注册LeanCloud账号](https://leancloud.cn/dashboard/login.html)，注意需要验证邮箱，注册成功后进入控制台，需要先实名认证，认证成功后，点击创建应用，新应用名称就填Valine，这个随便，选择开发版，点击创建，点击存储图标，点击创建Class，Class名称填Comment，添加，再点击创建Class，Class名称填Counter，添加，创建Class成功后如下图。
+
+![](https://image.ql-isaac.cn/创建Class.png)
+
+　　点击左边的设置，点击安全中心，服务开关里仅打开数据存储服务，Web安全域名中填写自己的博客地址，保存，点击左侧应用keys，获取到<自己的App ID>和<自己的App key>。
+
+　　编辑NexT的配置文件：
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第574行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第574行，请以实际情况为准
+# Multiple Comment System Support
+comments:
+  # Available values: tabs | buttons
+  style: tabs
+  # Choose a comment system to be displayed by default.
+  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
+-  active:
+  # Setting `true` means remembering the comment system selected by the visitor.
+  storage: true
+  # Lazyload all comment systems.
+  lazyload: false
+  # Modify texts or order for any navs, here are some examples.
+  nav:
+    #disqus:
+    #  text: Load Disqus
+    #  order: -1
+    #gitalk:
+    #  order: -2
+```
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第574行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第574行，请以实际情况为准
+# Multiple Comment System Support
+comments:
+  # Available values: tabs | buttons
+  style: tabs
+  # Choose a comment system to be displayed by default.
+  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
++  active: valine
+  # Setting `true` means remembering the comment system selected by the visitor.
+  storage: true
+  # Lazyload all comment systems.
+  lazyload: false
+  # Modify texts or order for any navs, here are some examples.
+  nav:
+    #disqus:
+    #  text: Load Disqus
+    #  order: -1
+    #gitalk:
+    #  order: -2
+```
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第621行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第621行，请以实际情况为准
+# Valine
+# For more information: https://valine.js.org, https://github.com/xCss/Valine
+valine:
+-  enable: false
+-  appid: # Your leancloud application appid
+-  appkey: # Your leancloud application appkey
+  notify: false # Mail notifier
+  verify: false # Verification code
+  placeholder: Just go go # Comment box placeholder
+  avatar: mm # Gravatar style
+  guest_info: nick,mail,link # Custom comment header
+  pageSize: 10 # Pagination size
+-  language: # Language, available values: en, zh-cn
+  visitor: false # Article reading statistic
+  comment_count: true # If false, comment count will only be displayed in post page, not in home page
+-  recordIP: false # Whether to record the commenter IP
+  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  #post_meta_order: 0
+```
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第621行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第621行，请以实际情况为准
+# Valine
+# For more information: https://valine.js.org, https://github.com/xCss/Valine
+valine:
++  enable: true
++  appid: <自己的App ID>
++  appkey: <自己的App key>
+  notify: false # Mail notifier
+  verify: false # Verification code
+  placeholder: Just go go # Comment box placeholder
+  avatar: mm # Gravatar style
+  guest_info: nick,mail,link # Custom comment header
+  pageSize: 10 # Pagination size
++  language: zh-cn
+  visitor: false # Article reading statistic
+  comment_count: true # If false, comment count will only be displayed in post page, not in home page
++  recordIP: true # Whether to record the commenter IP
+  serverURLs: # When the custom domain name is enabled, fill it in here (it will be detected automatically by default, no need to fill in)
+  #post_meta_order: 0
+```
+
+###  开启busuanzi统计
+
+　　编辑NexT的配置文件：
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第721行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第721行，请以实际情况为准
+# Show Views / Visitors of the website / page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi
+busuanzi_count:
+-  enable: false
+  total_visitors: true
+  total_visitors_icon: user
+  total_views: true
+  total_views_icon: eye
+  post_views: true
+  post_views_icon: eye
+```
+
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第721行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第721行，请以实际情况为准
+# Show Views / Visitors of the website / page with busuanzi.
+# Get more information on http://ibruce.info/2015/04/04/busuanzi
+busuanzi_count:
++  enable: true
+  total_visitors: true
+  total_visitors_icon: user
+  total_views: true
+  total_views_icon: eye
+  post_views: true
+  post_views_icon: eye
+```
+
 ### 添加本地搜索功能
 
 　　在<存储HexoBlog的文件夹>下进入终端，输入如下命令安装hexo-generator-searchdb模块。
@@ -741,21 +939,10 @@ font:
 cnpm install --save hexo-generator-searchdb
 ```
 
-　　编辑Hexo的配置文件：
-
-```diff
-# 本行为<存储HexoBlog的文件夹>\_config.yml的第104行（随着Hexo的不断更新，本行对应在你的_config.yml中不一定是第104行，请以实际情况为准
-+search:
-+  path: search.xml
-+  field: post
-+  format: html
-+  limit: 10000
-```
-
 　　开启本地搜索功能。编辑NexT的配置文件：
 
 ```diff
-# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第750行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第750行，请以实际情况为准
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第749行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第749行，请以实际情况为准
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
@@ -772,7 +959,7 @@ local_search:
 ```
 
 ```diff
-# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第750行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第750行，请以实际情况为准
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第749行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第749行，请以实际情况为准
 # Local Search
 # Dependencies: https://github.com/theme-next/hexo-generator-searchdb
 local_search:
@@ -785,76 +972,49 @@ local_search:
   # Unescape html strings to the readable one.
   unescape: false
   # Preload the search data when the page loads.
-  preload: false
+  preload: false　
 ```
 
-　　还不清楚？演示视频如下：
-　　
-<video id="video1" preload controls loop style="height: 100%;width: 100%;object-fit: cover;"></video>
-<script>
-  if (Hls.isSupported()) {
-    var video1 = document.getElementById('video1');
-    var hls = new Hls();
-    hls.loadSource('https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/增加本地搜索功能/增加本地搜索功能.m3u8');
-    hls.attachMedia(video1);
-    hls.on(Hls.Events.MANIFEST_PARSED,function() {
-      video.play();
-  });
-  }
-</script>
+### 设置Note tag
 
-### 添加友情链接
+　　编辑NexT的配置文件：
 
-　　打开NexT的配置文件，关键字links查找，添加友情链接。具体操作如下视频：
-
-<video id="video2" preload controls loop style="height: 100%;width: 100%;object-fit: cover;"></video>
-<script>
-  if (Hls.isSupported()) {
-    var video2 = document.getElementById('video2');
-    var hls = new Hls();
-    hls.loadSource('https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/添加友情链接/添加友情链接.m3u8');
-    hls.attachMedia(video2);
-    hls.on(Hls.Events.MANIFEST_PARSED,function() {
-      video.play();
-  });
-  }
-</script>
-
-### 下载并开启fancybox功能（查看图片功能）
-
-　　进入<存储HexoBlog的文件夹>下themes下next下source下lib下，右键，选择Git Bash Here进入终端，输入如下命令下载fancybox，再打开NexT的配置文件，关键字fancybox查找，开启fancybox功能。具体操作如下视频：
-
-```
-git clone https://github.com/theme-next/theme-next-fancybox3 fancybox
-```
-<video id="video3" preload controls loop style="height: 100%;width: 100%;object-fit: cover;"></video>
-<script>
-  if (Hls.isSupported()) {
-    var video3 = document.getElementById('video3');
-    var hls = new Hls();
-    hls.loadSource('https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/开启fancybox功能/开启fancybox功能.m3u8');
-    hls.attachMedia(video3);
-    hls.on(Hls.Events.MANIFEST_PARSED,function() {
-      video.play();
-  });
-  }
-</script>
-
-### 添加 Valine 评论系统
-
-　　Valine是基于LeanCloud的，首先需要[注册LeanCloud账号](https://leancloud.cn/dashboard/login.html)，注意需要验证邮箱，注册成功后进入控制台，需要先实名认证，认证成功后，点击创建应用，新应用名称就填Valine，选择开发版，点击创建，点击存储图标，点击创建Class，Class名称填Comment，添加，再点击创建Class，Class名称填Counter，添加，创建Class成功后如下图。
-
-![](https://image.ql-isaac.cn/创建Class.png)
-
-　　点击左边的设置，点击安全中心，服务开关里仅打开数据存储服务，Web安全域名中填写自己的博客地址，保存，点击左侧应用keys，获取到App ID和App key。
-
-　　打开NexT的配置文件，关键字valine查找，设置comments下的active为valine，再点击查找下一个，设置valine下的enable为true，配置valine下的appid和appkey为获取到的App ID和App key，设置valine下的language为zh-cn，再点击一次查找下一个，配置valine为以下地址，如下图。
-
-```
-https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第794行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第794行，请以实际情况为准
+# Note tag (bs-callout)
+note:
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
+-  style: simple
+-  icons: false
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
 ```
 
-![](https://image.ql-isaac.cn/valine.png)
+```diff
+# 本行为<存储HexoBlog的文件夹>\themes\next\_config.yml的第794行（随着NexT的不断更新，本行对应在你的_config.yml中不一定是第794行，请以实际情况为准
+# Note tag (bs-callout)
+note:
+  # Note tag style values:
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
+  #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
+  #  - disabled  disable all CSS styles import of note tag.
++  style: flat
++  icons: true
+  # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
+  # Offset also applied to label tag variables. This option can work with disabled note tag.
+  light_bg_offset: 0
+```
 
 ## 参考
 
+https://theme-next.js.org/
+
+https://lixint.github.io/
+
+http://www.dragonbaby308.com/

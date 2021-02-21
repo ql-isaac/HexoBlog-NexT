@@ -116,9 +116,3 @@ douban:
     title: It's a beautiful day!
     quote: It's a beautiful day!
   timeout: 10000
-
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
