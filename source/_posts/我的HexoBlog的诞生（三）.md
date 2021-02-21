@@ -15,6 +15,8 @@ categories:
 
 <!-- more -->
 
+<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+
 ## 使用Typora编辑Markdown文件，书写博客文章
 
 　　通过执行`hexo new post <自定义md文件名>`，相应Markdown文件将在_posts下生成，那么该如何编辑这种Markdown文件，书写自己的博客文章呢？
@@ -38,7 +40,20 @@ categories:
 #### 四级标题
 ```
 
-{% dplayer "url=https://image.ql-isaac.cn/%E6%A0%87%E9%A2%98.mp4" %}
+　　演示视频：
+
+<video id="video1" preload controls loop style="height: 100%;width: 100%;object-fit: cover;"></video>
+<script>
+  if (Hls.isSupported()) {
+    var video1 = document.getElementById('video1');
+    var hls = new Hls();
+    hls.loadSource('https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/标题/标题.m3u8');
+    hls.attachMedia(video1);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+  });
+  }
+</script>
 
 ### 列表
 

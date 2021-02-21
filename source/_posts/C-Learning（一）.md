@@ -13,6 +13,8 @@ categories:
 
 <!-- more -->
 
+<script src="https://cdn.jsdelivr.net/npm/hls.js"></script>
+
 ## C语言的简单历史
 
 　　C语言是从B语言发展而来，B语言是从BCPL发展而来，BCPL是从FORTRAN发展而来。C语言于1972年11月问世，1973年3月，第三版的Unix上出现了C语言的编译器，1973年11月，第四版的Unix发布了，这个版本是完全用C语言重新写的，1978年美国电话电报公司（AT&T）贝尔实验室正式发布C语言，1983年美国国家标准局（American National Standards Institute，简称 ANSI）开始制定C语言标准，于1989年12月完成，并在1990年春天发布，称之为ANSI C，有时也被称为C89或C90。
@@ -223,7 +225,18 @@ categories:
 
 20. 最后，在优化->窗口中，设置标题栏按钮在左边，右键桌面更换个壁纸，至此，美化算是告一段落了。
 
-   {% dplayer "url=https://image.ql-isaac.cn/%E7%BE%8E%E5%8C%96.mp4" %}
+<video id="video1" preload controls loop style="height: 100%;width: 100%;object-fit: cover;"></video>
+<script>
+  if (Hls.isSupported()) {
+    var video1 = document.getElementById('video1');
+    var hls = new Hls();
+    hls.loadSource('https://cdn.jsdelivr.net/gh/ql-isaac/CDN2/美化/美化.m3u8');
+    hls.attachMedia(video1);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+  });
+  }
+</script>
 
 ### 安装build-essential软件包和Vim文本编辑器
 
